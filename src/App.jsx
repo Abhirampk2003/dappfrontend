@@ -1,15 +1,20 @@
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import FeatureSection from "./components/FeatureSection";
+
+import {Routes,Route} from "react-router-dom"
+import Signin from "./pages/Signin"
+import Home from "./pages/Home"
 
 const App = () => {
   return (
     <>
       <Navbar />
       <div className="max-w-7xl mx-auto pt-20 px-6">
-        <HeroSection />
-        <FeatureSection />
-        
+      <Routes>
+        <Route path="/" element = {<Home/>}/>
+        <Route path="/Signin" element = {<Signin/>}/>
+
+      
+        </Routes>        
       </div>
     </>
   );

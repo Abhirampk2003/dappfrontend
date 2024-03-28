@@ -8,3 +8,17 @@
   font-family: "Poppins", sans-serif;
   color-scheme: dark;
 }
+
+/* CSS */
+@keyframes spin-horizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-spin-horizontal {
+  animation: spin-horizontal 2s linear infinite;
+}

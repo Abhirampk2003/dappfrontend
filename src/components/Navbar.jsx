@@ -2,6 +2,8 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import { navItems } from "../constants";
+import {Link} from "react-router-dom";
+
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -21,12 +23,12 @@ const Navbar = () => {
           
           <div className="hidden lg:flex justify-center space-x-12 items-center">
          
-            <a
-              href="#"
+            <Link
+              to="/Signin"
               className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
             >
               Sign IN
-            </a>
+            </Link>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
